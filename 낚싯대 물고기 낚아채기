@@ -6,7 +6,7 @@ let numSegments = 10, //낙싯대 구 갯수
   targetX,
   targetY,
   ballX = 50,//구 x위치
-  ballY = 50,//구 y위치
+  ballY = 500,//구 y위치
   ballXDirection = 1,
   ballYDirection = -1,
   xtime =0.0,

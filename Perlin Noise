@@ -1,0 +1,29 @@
+var xtime =0.0;
+
+var ytime = 100.0;
+
+var increment = 0.01;
+
+function setup() {
+
+  createCanvas(400, 400);
+
+}
+
+function draw() {
+
+  background(255);
+
+  var x = noise(xtime) * width;
+
+  var y = noise(ytime) * width;
+
+  xtime += increment;
+
+  ytime += increment;
+
+  fill(0);
+
+  ellipse(x, y, 50, 50);
+
+}

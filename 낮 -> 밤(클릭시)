@@ -1,4 +1,4 @@
-// 태양 클릭 시 낮
+
 function setup() {
   createCanvas(600, 600);
 
@@ -9,24 +9,25 @@ function draw() {
   // 원 그리기
   strokeWeight(2);
   fill(255,0,0);
-  ellipse(360, 200, 55, 55);
+  ellipse(250, 50, 55, 55);
   fill(255,212,0);
-  rect(500, height/2, 55, 55);
+  rect(350, 22, 55, 55);
   noStroke();
 }
 
 // 사용자가 마우스를 클릭했을 때,
 function mousePressed() {
   // 마우스가 원의 안쪽에 있는지 확인하기
-  let c = dist(mouseX, mouseY, 360, 200);
+  let c = dist(mouseX, mouseY, 250, 50);
   if (c < 22.5) {
     // 새로운 임의의 색상 고르기
-    background(0);
+    background(80,188, 223);
   }
 }
-/*function mousePressed(){
-  let r = dist(mouseX, mouseY, 500, height/2);
+/*
+ function mousePressed(){
+  let r = dist(mouseX, mouseY, 350, 22);
   if(r < 22.5){
-    background(80,188, 223);
+    background(0);
   }
 }*/

@@ -26,7 +26,7 @@ function setup() {
   noFill();
 
   x[x.length - 1] = width; // 기본 x좌표 설정 낙싯대 위치 가로
-  y[x.length - 1] = height/2; // 기본 y좌표 설정 낙싯대 위치 세로
+  y[x.length - 1] = height/3; // 기본 y좌표 설정 낙싯대 위치 세로
 }
 
 function draw() {
@@ -36,13 +36,13 @@ function draw() {
   ballX = ballX + 1.0 * ballXDirection;
   ballY = ballY + 0.8 * ballYDirection;
   ballX = noise(xtime) * width;
-  ballY = noise(ytime) * width;
+  ballY = noise(ytime) * height+200;
   xtime += increment;
   ytime += increment;
   if (ballX > width - 25 || ballX < 25) {
     ballXDirection *= -1;
   }
-  if (ballY > height - 25 || ballY < 25) {
+  if (ballY > (height+200) - 25 || ballY < 25) {
     ballYDirection *= -1;
   }
   ellipse(ballX, ballY, 30, 30);

@@ -42,7 +42,7 @@ function draw() {
   if (ballX > width - 25 || ballX < 25) {
     ballXDirection *= -1;
   }
-  if (ballY > (height+200) - 25 || ballY < 25) {
+  if (ballY > height - 25 || ballY < 300) {
     ballYDirection *= -1;
   }
   ellipse(ballX, ballY, 30, 30);

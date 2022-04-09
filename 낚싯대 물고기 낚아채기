@@ -1,14 +1,17 @@
-let numSegments = 8,
+let numSegments = 10,
   x = [],
   y = [],
   angle = [],
-  segLength = 26,
+  segLength = 50,
   targetX,
   targetY,
   ballX = 50,
   ballY = 50,
   ballXDirection = 1,
-  ballYDirection = -1;
+  ballYDirection = -1,
+  xtime =0.0,
+  ytime = 100.0,
+  increment = 0.01;
 
 for (let i = 0; i < numSegments; i++) {
   x[i] = 0;
@@ -17,13 +20,13 @@ for (let i = 0; i < numSegments; i++) {
 }
 
 function setup() {
-  createCanvas(710, 400);
+  createCanvas(600, 600);
   strokeWeight(20);
   stroke(255, 100);
   noFill();
 
-  x[x.length - 1] = width / 2; // 기본 x좌표 설정
-  y[x.length - 1] = height; // 기본 y좌표 설정
+  x[x.length - 1] = width; // 기본 x좌표 설정
+  y[x.length - 1] = height/2; // 기본 y좌표 설정
 }
 
 function draw() {
@@ -32,6 +35,10 @@ function draw() {
   strokeWeight(20);
   ballX = ballX + 1.0 * ballXDirection;
   ballY = ballY + 0.8 * ballYDirection;
+  ballX = noise(xtime) * width;
+  ballY = noise(ytime) * width;
+  xtime += increment;
+  ytime += increment;
   if (ballX > width - 25 || ballX < 25) {
     ballXDirection *= -1;
   }
@@ -40,7 +47,7 @@ function draw() {
   }
   ellipse(ballX, ballY, 30, 30);
 
-  reachSegment(0, ballX, ballY);
+  reachSegment(0, mouseX, mouseY);
   for (let i = 1; i < numSegments; i++) {
     reachSegment(i, targetX, targetY);
   }

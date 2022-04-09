@@ -1,5 +1,5 @@
 # Fish-Fishing-Implementation
-물고기 구현
+물고기잡기 구현
 
 1. 2D 구현 예정
 2. 낚시대만들고 물고기가 돌아다니면 낚아채기

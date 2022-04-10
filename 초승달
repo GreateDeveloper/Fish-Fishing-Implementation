@@ -1,0 +1,28 @@
+strokeWeight(5);
+background(0);
+point(65, 19);
+point(47, 25);
+point(30, 40);
+point(30, 60);
+point(47, 80);
+point(65, 91);
+point(50, 60);
+point(50, 40);
+strokeWeight(1);
+
+//noFill();
+noStroke();
+fill(255,212,0);
+beginShape();
+curveVertex(65, 19);
+curveVertex(65, 19);
+curveVertex(47, 25);
+curveVertex(30, 40);
+curveVertex(30, 60);
+curveVertex(47, 80);
+curveVertex(65, 91);
+curveVertex(50, 60);
+curveVertex(50, 40);
+curveVertex(65, 19);
+curveVertex(65, 19);
+endShape();

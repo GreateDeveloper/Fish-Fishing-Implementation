@@ -43,9 +43,9 @@ function setup() {
 }
 
 function draw() {
-  push();
-  //background(100,155);
-  pop();
+  //push();
+  background(50,20);
+  //pop();
   strokeWeight(20);
   ballX = ballX + 1.0 * ballXDirection;
   ballY = ballY + 0.8 * ballYDirection;

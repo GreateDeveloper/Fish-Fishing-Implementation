@@ -43,9 +43,8 @@ function setup() {
 }
 
 function draw() {
-  //push();
-  background(50,20);
-  //pop();
+
+  //background(50,20); //이거때매 화면이 이상함
   strokeWeight(20);
   ballX = ballX + 1.0 * ballXDirection;
   ballY = ballY + 0.8 * ballYDirection;
@@ -68,13 +67,10 @@ function draw() {
   for (let k = 0; k < x.length; k++) {
     segment(x[k], y[k], angle[k], (k + 1) * 2);
   }
-  push();
+  
   // 상자 위에 커서가 있는지를 테스트
   fishCatch();
-  checkFishCollision();
-  checkForScore();
-  pop();
- 
+
   push();
   // 바다 지형 생성
   ocean();
@@ -86,16 +82,10 @@ function draw() {
   //초승달
   crescent();
   pop();
-  
-  push();
   // 태양 클릭시 낮
   sunClick();
-  pop();
-  
-  push(); 
   //초승달 클릭시 밤
   crescentClick();
-  pop();
 }
 
 function mousePressed() {
